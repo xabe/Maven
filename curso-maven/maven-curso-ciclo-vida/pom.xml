@@ -1,0 +1,404 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+	<groupId>indizen</groupId>
+	<artifactId>curso-maven</artifactId>
+	<version>1.0</version>
+  </parent>
+  <groupId>indizen</groupId>
+  <artifactId>maven-curso-ciclo-vida</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>maven-curso-ciclo-vida</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.3</version>
+				<executions>
+					<!-- Ciclo de vida clean -->
+					<execution>
+						<id>id.pre-clean</id>
+						<phase>pre-clean</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in pre-clean phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in clean phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.post-clean</id>
+						<phase>post-clean</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in post-clean phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<!-- Ciclo de vida default -->
+					<execution>
+						<id>id.validate</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in validate phase (1 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.initialize</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in initialize phase (2 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.generate-sources</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in generate-sources phase (3 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.process-sources</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in process-sources phase (4 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.generate-resources</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in generate-resources phase (5 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.process-resources</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in process-resources phase (6 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in compile phase (7 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.process-classes</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in process-classes phase (8 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.generate-test-sources</id>
+						<phase>generate-test-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in generate-test-sources phase (9 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.process-test-sources</id>
+						<phase>process-test-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in process-test-sources phase (10 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.generate-test-resources</id>
+						<phase>generate-test-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in generate-test-resources phase (11 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.process-test-resources</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in process-test-resources phase (12 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.test-compile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in test-compile phase (13 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.process-test-classes</id>
+						<phase>process-test-classes</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in process-test-classes phase (14 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in test phase (15 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.prepare-package</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in prepare-package phase (16 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.package</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in package phase (17 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.pre-integration-test</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in pre-integration-test phase (18 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.integration-test</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in integration-test phase (19 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.post-integration-test</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in post-integration-test phase (20 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.verify</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in verify phase (21 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.install</id>
+						<phase>install</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in install phase (22 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in deploy phase (23 of 23)</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<!-- Ciclo de vida site -->
+					<execution>
+						<id>id.pre-site</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in pre-site phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.site</id>
+						<phase>site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in site phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.post-site</id>
+						<phase>post-site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in post-site phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.site-deploy</id>
+						<phase>site-deploy</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in site-deploy phase</echo>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
